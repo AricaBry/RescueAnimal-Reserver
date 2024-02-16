@@ -21,13 +21,7 @@ public class Driver {
         initializeMonkeyList();
 
         // Add a loop that displays the menu, accepts the users input
-        // and takes the appropriate action.
-	// For the project submission you must also include input validation
-        // and appropriate feedback to the user.
-        // Hint: create a Scanner and pass it to the necessary
-        // methods 
-	// Hint: Menu options 4, 5, and 6 should all connect to the printAnimals() method.
-        
+        // and takes the appropriate action.        
         // UPDATED: Added while loop to check user input for menu
         while(!menuInput.equalsIgnoreCase("q")) {
         	displayMenu();
@@ -98,9 +92,6 @@ public class Driver {
     }
 
 
-    // Complete the intakeNewDog method
-    // The input validation to check that the dog is not already in the list
-    // is done for you
     public static void intakeNewDog(Scanner scanner) {
         System.out.println("What is the dog's name?");
         String name = scanner.nextLine();
@@ -170,11 +161,8 @@ public class Driver {
     }
 
 
-        // Complete intakeNewMonkey
 	//Instantiate and add the new monkey to the appropriate list
-        // For the project submission you must also  validate the input
-	// to make sure the monkey doesn't already exist and the species type is allowed
-    
+        // Validate the input to make sure the monkey doesn't already exist and the species type is allowed
     	// UPDATED: Added method to intake new monkeys
         public static void intakeNewMonkey(Scanner scanner) {
             System.out.println("What is the monkey's name?");
@@ -290,8 +278,6 @@ public class Driver {
             monkeyList.add(monk);
         }
 
-        // Complete reserveAnimal
-        // You will need to find the animal by animal type and in service country
         public static void reserveAnimal(Scanner scanner) {
         	// Object to hold rescue animal attributes
         	RescueAnimal animal = new RescueAnimal();
@@ -354,9 +340,7 @@ public class Driver {
         // monkey - prints the list of monkeys
         // available - prints a combined list of all animals that are
         // fully trained ("in service") but not reserved 
-	// Remember that you only have to fully implement ONE of these lists. 
 	// The other lists can have a print statement saying "This option needs to be implemented".
-	// To score "exemplary" you must correctly implement the "available" list.
         public static void printAnimals(int action) {
         	// prints list of dogs
             if (action == 4) {
